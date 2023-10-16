@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="robotModel" nsURI="http://www.example.org/robotModel" nsPrefix="robotModel">
+  <eClassifiers xsi:type="ecore:EClass" name="RML">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mouvement" upperBound="-1"
+        eType="#//Mouvement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="distance" eType="#//Capteur"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mouvement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LongitudinalMouvement" eSuperTypes="#//Mouvement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frontward" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LateralMouvement" eSuperTypes="#//Mouvement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="right" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RadialMouvement" eSuperTypes="#//Mouvement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clockwize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Capteur"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="m" eSuperTypes="#//TranslationUnit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="mm" eSuperTypes="#//RotationUnit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="cm" eSuperTypes="#//TranslationUnit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="deg" eSuperTypes="#//TranslationUnit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="rad" eSuperTypes="#//RotationUnit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TranslationUnit" eSuperTypes="#//Unit">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="longitudinalmouvement"
+        eType="#//LongitudinalMouvement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lateralmouvement" eType="#//LateralMouvement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RotationUnit" eSuperTypes="#//Unit">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="radialmouvement" eType="#//RadialMouvement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Clock" eSuperTypes="#//Capteur"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Distance" eSuperTypes="#//Capteur"/>
+</ecore:EPackage>
