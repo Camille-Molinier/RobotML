@@ -12,6 +12,8 @@
     <genClasses ecoreClass="robotModel.ecore#//RML">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robotModel.ecore#//RML/mouvement"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robotModel.ecore#//RML/distance"/>
+      <genOperations ecoreOperation="robotModel.ecore#//RML/setup"/>
+      <genOperations ecoreOperation="robotModel.ecore#//RML/loop"/>
     </genClasses>
     <genClasses ecoreClass="robotModel.ecore#//Mouvement"/>
     <genClasses ecoreClass="robotModel.ecore#//LongitudinalMouvement">
@@ -23,12 +25,12 @@
     <genClasses ecoreClass="robotModel.ecore#//RadialMouvement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robotModel.ecore#//RadialMouvement/clockwize"/>
     </genClasses>
-    <genClasses ecoreClass="robotModel.ecore#//Capteur"/>
+    <genClasses ecoreClass="robotModel.ecore#//Sensor"/>
     <genClasses ecoreClass="robotModel.ecore#//Unit"/>
     <genClasses ecoreClass="robotModel.ecore#//m"/>
-    <genClasses ecoreClass="robotModel.ecore#//mm"/>
-    <genClasses ecoreClass="robotModel.ecore#//cm"/>
     <genClasses ecoreClass="robotModel.ecore#//deg"/>
+    <genClasses ecoreClass="robotModel.ecore#//cm"/>
+    <genClasses ecoreClass="robotModel.ecore#//mm"/>
     <genClasses ecoreClass="robotModel.ecore#//rad"/>
     <genClasses ecoreClass="robotModel.ecore#//TranslationUnit">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robotModel.ecore#//TranslationUnit/longitudinalmouvement"/>
@@ -39,5 +41,28 @@
     </genClasses>
     <genClasses ecoreClass="robotModel.ecore#//Clock"/>
     <genClasses ecoreClass="robotModel.ecore#//Distance"/>
+    <genClasses ecoreClass="robotModel.ecore#//Expression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robotModel.ecore#//Expression/expression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robotModel.ecore#//Expression/variable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robotModel.ecore#//Expression/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="robotModel.ecore#//Variable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robotModel.ecore#//Variable/type"/>
+    </genClasses>
+    <genClasses ecoreClass="robotModel.ecore#//Operator"/>
+    <genClasses ecoreClass="robotModel.ecore#//Type"/>
+    <genClasses ecoreClass="robotModel.ecore#//Boolean"/>
+    <genClasses ecoreClass="robotModel.ecore#//Interger"/>
+    <genClasses ecoreClass="robotModel.ecore#//Float"/>
+    <genClasses ecoreClass="robotModel.ecore#//Void"/>
+    <genClasses ecoreClass="robotModel.ecore#//ArtimethicOperator"/>
+    <genClasses ecoreClass="robotModel.ecore#//BooleanOperator"/>
+    <genClasses ecoreClass="robotModel.ecore#//ComparisonOperator"/>
+    <genClasses ecoreClass="robotModel.ecore#//Plus"/>
+    <genClasses ecoreClass="robotModel.ecore#//Minus"/>
+    <genClasses ecoreClass="robotModel.ecore#//Multiplication"/>
+    <genClasses ecoreClass="robotModel.ecore#//Division"/>
+    <genClasses ecoreClass="robotModel.ecore#//Assignment"/>
+    <genClasses ecoreClass="robotModel.ecore#//Remainder"/>
   </genPackages>
 </genmodel:GenModel>
